@@ -9,11 +9,11 @@ import { QuoteWidget } from "@/components/stock/widgets/quote-widget"
 import { RecommendationWidget } from "@/components/stock/widgets/recommendation-widget"
 import { cn } from "@/lib/utils"
 import { WishlistStar } from "@/components/ui/wishlist-star"
+import EarningsCalendarWidget from "@/components/stock/widgets/earnings-calendar-widget"
 
 type StockSymbolViewProps = {
   symbol: string
   className?: string
-  /** When set, shows paper trading card with this cash balance. */
   paperCashUsd?: number
 }
 
@@ -47,6 +47,9 @@ export const StockSymbolView = ({ symbol, className, paperCashUsd }: StockSymbol
       </div>
 
       <PeersWidget symbol={symbol} />
+
+      <EarningsCalendarWidget symbol={symbol} />
+
     </div>
   )
 }
