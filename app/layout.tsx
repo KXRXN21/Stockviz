@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import { Geist, Geist_Mono, Inter } from 'next/font/google'
 import ShellFrame from '@/components/layout/shell-frame'
 import { ThemeProvider } from '@/components/providers/theme-provider'
-import { WishlistProvider } from '@/components/providers/wishlist-provider'
 import { Toaster } from '@/components/ui/sonner'
 import './globals.css'
 
@@ -66,9 +65,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <WishlistProvider>
-            <ShellFrame>{children}</ShellFrame>
-          </WishlistProvider>
+          <ShellFrame>{children}</ShellFrame>
           <Toaster richColors position="bottom-right" />
         </ThemeProvider>
       </body>

@@ -200,11 +200,7 @@
 }
 
 .material-symbols-outlined {
-  font-variation-settings:
-    "FILL" 0,
-    "wght" 300,
-    "GRAD" 0,
-    "opsz" 20;
+  font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 20;
   vertical-align: middle;
 }
 
@@ -296,24 +292,4 @@
       transform: translateY(0);
     }
   }
-}
-
-/* Dashboard movers: translate by measured first-strip width (CSS var). */
-@keyframes movers-marquee-x {
-  from {
-    transform: translateX(0);
-  }
-
-  to {
-    transform: translateX(var(--movers-shift, -50%));
-  }
-}
-
-/* Inline animation styles caused SSR/client style serialization mismatches; use vars only from React. */
-.movers-marquee-track {
-  animation-name: movers-marquee-x;
-  animation-duration: var(--movers-duration, 160s);
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-play-state: var(--movers-play-state, running);
 }
